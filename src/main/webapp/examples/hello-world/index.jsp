@@ -35,8 +35,11 @@
         function canvasCallback(){
         	var sr = JSON.parse('<%=signedRequestJson%>');
         	Sfdc.canvas.oauth.token(sr.oauthToken);
-            Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
+        	Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
+            Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
+            Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
             Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
+            
         }
 
         Sfdc.canvas(canvasCallback);
@@ -44,8 +47,10 @@
     </script>
 </head>
 <body>
-    <h1>Hello <span id='username'></span></h1> 
-    <h1>Parameters passed = <span id='params'></span></h1>
+    <h1>Context.Application = <span id='application'></span></h1>
+    <h1>Context.User = <span id='user'></span></h1> 
+    <h1>Context.Record = <span id='record'></span></h1>   
+    <h1>Context.Parameters = <span id='params'></span></h1>
    
 </body>
 </html>
