@@ -4,8 +4,9 @@
     // Pull the signed request out of the request body and verify/decode it.
     Map<String, String[]> parameters = request.getParameterMap();
     String[] signedRequest = parameters.get("signed_request");
-    if (signedRequest == null) {%>
-        This App must be invoked via a signed request!<%
+    if (signedRequest == null) {
+    
+        out.println("This App must be invoked via a signed request!");
         return;
     }
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
@@ -42,7 +43,6 @@
     </script>
 </head>
 <body>
-    <br/>
-    <h1>Hello <span id='username'></span></h1>
+    <h1>Hello World <span id='username'></span></h1>
 </body>
 </html>
