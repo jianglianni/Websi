@@ -33,13 +33,15 @@
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
-
-        Sfdc.canvas(function() {
-            var sr = JSON.parse('<%=signedRequestJson%>');
+        
+        function canvasCallback(){
+        	var sr = JSON.parse('<%=signedRequestJson%>');
             // Save the token
             Sfdc.canvas.oauth.token(sr.oauthToken);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
-        });
+        }
+
+        Sfdc.canvas(canvasCallback);
 
     </script>
 </head>
@@ -53,7 +55,7 @@
     %>
 
     <h5><%=paramName%> has a value <%=paramValue%></h5>
-
+    
     <%
         }
     %>
