@@ -47,14 +47,15 @@
     </script>
 </head>
 <body>
-	<h1>Context.Application = </h1>
-	<p id='application'></p>
-    <h1>Context.User = </h1> 
-    <p id='user'></p>
-    <h1>Context.Record = </h1>   
-    <p id='record'></p>
-    <h1>Context.Parameters = </h1>
-    <p id='params'></p>
+	<div id="wrapper" style="text-align:center">
+		<div id="container" style="display:inline-block;text-align:left">
+			<h1>Context.Application = </h1> <p id='application'></p>
+	    	<h1>Context.User = </h1> <p id='user'></p>
+	    	<h1>Context.Record = </h1> <p id='record'></p>
+	    	<h1>Context.Parameters = </h1> <p id='params'></p>
+		 
+		</div>
+	</div>
    
 </body>
 </html>
