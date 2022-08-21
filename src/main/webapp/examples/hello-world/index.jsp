@@ -6,12 +6,10 @@
     Map<String, String[]> parameters = request.getParameterMap();
     String[] signedRequest = parameters.get("signed_request");
     if (signedRequest == null) {
-    
         out.println("This App must be invoked via a signed request!");
         return;
     }
     String yourConsumerSecret=System.getenv("CANVAS_CONSUMER_SECRET");
-    //String yourConsumerSecret="1818663124211010887";
     String signedRequestJson = SignedRequest.verifyAndDecodeAsJson(signedRequest[0], yourConsumerSecret);
 %>
 
@@ -36,10 +34,9 @@
         
         function canvasCallback(){
         	var sr = JSON.parse('<%=signedRequestJson%>');
-        	alert(sr);
-            // Save the token
-            Sfdc.canvas.oauth.token(sr.oauthToken);
+        	Sfdc.canvas.oauth.token(sr.oauthToken);
             Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
+            Sfdc.canvas.byId('params').innerHTML = sr.context.environment.parameters;
         }
 
         Sfdc.canvas(canvasCallback);
@@ -47,18 +44,8 @@
     </script>
 </head>
 <body>
-    <h1>Hello <span id='username'></span></h1>
-    <%
-        java.util.Enumeration<String> params = request.getParameterNames();
-        while(params.hasMoreElements()) {
-            String paramName = (String) params.nextElement();
-            String paramValue = request.getParameter(paramName);
-    %>
-
-    <h5><%=paramName%> has a value <%=paramValue%></h5>
-    
-    <%
-        }
-    %>
+    <h1>Hello <span id='username'></span></h1> 
+    <h1>Parameters passed = <span id='params'></span></h1>
+   
 </body>
 </html>
