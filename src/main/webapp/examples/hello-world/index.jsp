@@ -1,5 +1,6 @@
 <%@ page import="canvas.SignedRequest" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="java.util.Enumeration" %>
 <%
     // Pull the signed request out of the request body and verify/decode it.
     Map<String, String[]> parameters = request.getParameterMap();
@@ -43,6 +44,18 @@
     </script>
 </head>
 <body>
-    <h1>Hello World <span id='username'></span></h1>
+    <h1>Hello <span id='username'></span></h1>
+    <%
+        java.util.Enumeration<String> params = request.getParameterNames();
+        while(params.hasMoreElements()) {
+            String paramName = (String) params.nextElement();
+            String paramValue = request.getParameter(paramName);
+    %>
+
+    <h5><%=paramName%> has a value <%=paramValue%></h5>
+
+    <%
+        }
+    %>
 </body>
 </html>
