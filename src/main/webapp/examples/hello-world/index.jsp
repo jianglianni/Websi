@@ -44,7 +44,7 @@
         }
 
         Sfdc.canvas(canvasCallback);
-        Sfdc.canvas.client.autogrow(sr.client);
+        
 
     </script>
 </head>
