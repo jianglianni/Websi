@@ -307,7 +307,7 @@
         return"&gt;";
       case '"':
         return"&quot;";
-      case "Â©":
+      case "©":
         return"&copy;";
       case "\u2028":
         return"<br>";
@@ -1316,3 +1316,4 @@
   }();
   $$.module("Sfdc.canvas.client", module)
 })(Sfdc.canvas);
+
