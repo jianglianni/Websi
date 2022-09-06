@@ -38,6 +38,7 @@
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
             Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
+            Sfdc.canvas.byId('dimensions').innerHTML = JSON.stringify(sr.context.environment.dimensions);
             Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
             Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
             
@@ -53,8 +54,9 @@
 		<div id="container" style="display:inline-block;text-align:left">
 			<h1>Context.Application = </h1> <p id='application'></p>
 	    	<h1>Context.User = </h1> <p id='user'></p>
-	    	<h1>Context.Record = </h1> <p id='record'></p>
-	    	<h1>Context.Parameters = </h1> <p id='params'></p>
+	    	<h1>Context.Environment.Dimensions = </h1> <p id='dimensions'></p>
+	    	<h1>Context.Environment.Record = </h1> <p id='record'></p>
+	    	<h1>Context.Enviroment.Parameters = </h1> <p id='params'></p>
 		 
 		</div>
 	</div>
