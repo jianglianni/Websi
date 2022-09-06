@@ -41,7 +41,7 @@
             Sfdc.canvas.byId('dimensions').innerHTML = JSON.stringify(sr.context.environment.dimensions);
             Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
             Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
-            //Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight});
+            Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight,width : sr.context.environment.dimensions.clientWidth });
             //Sfdc.canvas.client.autogrow(sr.client);
             
         }
