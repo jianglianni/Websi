@@ -45,7 +45,7 @@
             console.log("Client:"+ sr.context.environment.dimensions.clientHeight);
             //Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight,width : sr.context.environment.dimensions.clientWidth});
             Sfdc.canvas.client.resize(sr.client);
-            //Sfdc.canvas.client.autogrow(sr.client);
+            Sfdc.canvas.client.autogrow(sr.client);
             
         }
 
