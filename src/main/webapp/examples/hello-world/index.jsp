@@ -42,6 +42,9 @@
             Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
             Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
             Sfdc.canvas.byId('accountId').innerHTML = JSON.stringify(sr.context.environment.parameters.accountId);
+            var accountLink = sr.context.links.sobjectUrl + sr.context.environment.parameters.accountId;
+            console.log("accountLink:"+ accountLink);
+            Sfdc.canvas.byId('accountLink').href = accountLink;
             console.log("Client:"+ sr.context.environment.dimensions.clientWidth);
             console.log("Client:"+ sr.context.environment.dimensions.clientHeight);
             //Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight,width : sr.context.environment.dimensions.clientWidth});
@@ -58,19 +61,15 @@
 <body>
 	<div id="wrapper" style="text-align:center">
 		<div id="container" style="display:inline-block;text-align:left">
-			<table>
-				<tr>
-					<td>Context.Application =</td>
-					<td><p id='application'></td>
-				</tr>
-				
-			</table>
+			
 			<h1>Context.Application = </h1> <p id='application1'></p>
 	    	<h1>Context.User = </h1> <p id='user'></p>
 	    	<h1>Context.Environment.Dimensions with Auto Resize = </h1> <p id='dimensions'></p>
 	    	<h1>Context.Environment.Record = </h1> <p id='record'></p>
 	    	<h1>Context.Enviroment.Parameters = </h1> <p id='params'></p>
 	    	<h1>Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
+	    	<h1>Account Link = </h1> <a id ='accountLink' href="https://www.w3schools.com">Launch Account</a>
+	    	
 		 
 		</div>
 	</div>
