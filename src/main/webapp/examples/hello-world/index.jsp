@@ -68,7 +68,7 @@
 	    	<h1>Context.Environment.Record = </h1> <p id='record'></p>
 	    	<h1>Context.Enviroment.Parameters = </h1> <p id='params'></p>
 	    	<h1>Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
-	    	<h1>Account Link = </h1> <a id ='accountLink' href="https://www.w3schools.com">Launch Account</a>
+	    	<!--<h1>Account Link = </h1> <a id ='accountLink' href="https://www.w3schools.com">Launch Account</a>  -->
 	    	
 		 
 		</div>
