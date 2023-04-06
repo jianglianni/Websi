@@ -35,6 +35,7 @@
         
         function canvasCallback(){
         	var sr = JSON.parse('<%=signedRequestJson%>');
+        	console.log("SR:"+ JSON.stringify(sr) );
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
             Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
