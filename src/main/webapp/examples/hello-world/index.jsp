@@ -43,7 +43,7 @@
             Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
             Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
             Sfdc.canvas.byId('accountId').innerHTML = JSON.stringify(sr.context.environment.parameters.accountId);
-            var accountLink = sr.context.links.sobjectUrl +"Account/"+ sr.context.environment.parameters.accountId;
+            var accountLink = sr.client.instanceUrl +"/"+ sr.context.environment.parameters.accountId;
             console.log("accountLink:"+ accountLink);
             Sfdc.canvas.byId('accountLink').href = accountLink;
             console.log("Client:"+ sr.context.environment.dimensions.clientWidth);
