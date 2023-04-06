@@ -38,19 +38,13 @@
         	console.log("SR:"+ JSON.stringify(sr) );
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
-        	console.log("SR:Application" );
-            Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
-            console.log("SR:User" );
+        	Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
             Sfdc.canvas.byId('dimensions').innerHTML = JSON.stringify(sr.context.environment.dimensions);
-            console.log("SR:Dimension" );
             Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
-            console.log("SR:Record" );
             Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
-            console.log("SR:Params" );
             Sfdc.canvas.byId('accountId').innerHTML = JSON.stringify(sr.context.environment.parameters.accountId);
-            console.log("SR:AccountId" );
-            //var accountLink = JSON.stringify(sr.context.links.sobjectUrl) + JSON.stringify(sr.context.environment.parameters.accountId);
-            //console.log("accountLink:"+ accountLink);
+            var accountLink = JSON.stringify(sr.context.links.sobjectUrl) + JSON.stringify(sr.context.environment.parameters.accountId);
+            console.log("accountLink:"+ accountLink);
             //Sfdc.canvas.byId('accountLink').href = accountLink;
             console.log("Client:"+ sr.context.environment.dimensions.clientWidth);
             console.log("Client:"+ sr.context.environment.dimensions.clientHeight);
@@ -75,6 +69,7 @@
 	    	<h1>Context.Environment.Record = </h1> <p id='record'></p>
 	    	<h1>Context.Enviroment.Parameters = </h1> <p id='params'></p>
 	    	<h1>Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
+	    	<h1>AccountLink</h1> <a id=accountLink href="https://www.w3schools.com">Visit W3Schools</a>
 	    	
 		 
 		</div>
