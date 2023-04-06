@@ -69,7 +69,7 @@
 	<div id="wrapper" style="text-align:center">
 		<div id="container" style="display:inline-block;text-align:left">
 			
-			<h1>Context.Application = </h1> <p id='application1'></p>
+			<h1>Context.Application = </h1> <p id='application'></p>
 	    	<h1>Context.User = </h1> <p id='user'></p>
 	    	<h1>Context.Environment.Dimensions with Auto Resize = </h1> <p id='dimensions'></p>
 	    	<h1>Context.Environment.Record = </h1> <p id='record'></p>
