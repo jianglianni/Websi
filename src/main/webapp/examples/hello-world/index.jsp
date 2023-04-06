@@ -53,6 +53,13 @@
             Sfdc.canvas.client.autogrow(sr.client);
             
         }
+        
+        function openAccountLink(){
+        	var accountLink = document.getElementById("accountLink").href ;
+        	window.open(accountLink,'popup','width=600,height=600,scrollbars=no,resizable=no'); 
+        	return false;
+        	
+        }
 
         Sfdc.canvas(canvasCallback);
         
@@ -69,7 +76,7 @@
 	    	<h1>Context.Environment.Record = </h1> <p id='record'></p>
 	    	<h1>Context.Enviroment.Parameters = </h1> <p id='params'></p>
 	    	<h1>Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
-	    	<h1>AccountLink</h1> <a id=accountLink href="https://www.w3schools.com">Visit W3Schools</a>
+	    	<h1>AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
 	    	
 		 
 		</div>
