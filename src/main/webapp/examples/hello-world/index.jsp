@@ -35,7 +35,7 @@
         
         function canvasCallback(){
         	var sr = JSON.parse('<%=signedRequestJson%>');
-        	console.log("SR:"+ JSON.stringify(sr) );
+        	//console.log("SR:"+ JSON.stringify(sr) );
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
         	Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
@@ -60,6 +60,29 @@
         	return false;
         	
         }
+        
+        function postToPlatformEvent() {
+			var post = Sfdc.canvas.byId("post").value;
+			var url = sr.context.links.sobjectUrl + "/Canvas_App_PE__e";
+			console.log("postToPlatformEvent:url"+ url);
+			var eventData = {
+				Account_Id__c: sr.context.environment.parameters.accountId,
+				Logged_In_User_Id__c: sr.context.user.userId),
+				Refresh_Nba__c: true	
+			};
+			console.log("postToPlatformEvent:eventData"+ JSON.stringify(eventData));
+			Sfdc.canvas.client.ajax(url, {
+				client: sr.client,
+				method: "POST",
+				contentType: "application/json",
+				data: JSON.stringify(eventData),
+				success: function (data) {
+					if (201 === data.status) {
+						alert("Success");
+					}
+				},
+			});
+		}
 
         Sfdc.canvas(canvasCallback);
         
@@ -82,11 +105,11 @@
 				<div class="slds-form-element">
 					<div class="slds-form-element__control">
 						<div class="slds-grid slds-gutters">
-							<div class="slds-col slds-size_1-of-2">
+							<div class="slds-col slds-size_3-of-6">
 								<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
 							</div>
-							<div class="slds-col slds-size_1-of-2">
-								<button class="slds-button slds-button_brand" type="button" onclick="openAccountLink();">Post to Platform Event</button>
+							<div class="slds-col slds-size_3-of-6">
+								<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent();">Post to Platform Event</button>
 							</div>
 						</div>
 					</div>
