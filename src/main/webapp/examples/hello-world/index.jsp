@@ -69,15 +69,31 @@
 <body>
 	<div id="wrapper" style="text-align:center" class="slds-grid slds-gutters slds-grid_vertical">
 		<div id="container" style="display:inline-block;text-align:left" class="slds-grid slds-gutters slds-grid_vertical">
-			
-			<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
-	    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.User = </h1> <p id='user'></p>
-	    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Dimensions with Auto Resize = </h1> <p id='dimensions'></p>
-	    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Record = </h1> <p id='record'></p>
-	    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters = </h1> <p id='params'></p>
-	    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
-	    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
-	    	
+			<div class="slds-col">
+				<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
+		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.User = </h1> <p id='user'></p>
+		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Dimensions with Auto Resize = </h1> <p id='dimensions'></p>
+		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Record = </h1> <p id='record'></p>
+		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters = </h1> <p id='params'></p>
+		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
+		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
+	    	</div>
+	    	<div class="slds-col">
+				<div class="slds-form-element">
+					<div class="slds-form-element__control">
+						<div class="slds-grid slds-gutters">
+							<div class="slds-col slds-size_1-of-2">
+								<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
+							</div>
+							<div class="slds-col slds-size_1-of-2">
+								<button class="slds-button slds-button_brand" type="button" onclick="openAccountLink();">Post to Platform Event</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<h1 class="slds-text-heading_medium slds-m-around_xx-small">List of Chatter Users</h1>
+				<div id="chatter-users"></div>
+			</div>
 		 
 		</div>
 	</div>
