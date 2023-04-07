@@ -119,6 +119,44 @@
 		 
 		</div>
 	</div>
-   
+	<div>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+		  <thead>
+		    <tr class="slds-line-height_reset">
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+		      </th>
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Account Name">Account Name</div>
+		      </th>
+		    </tr>
+		  </thead>
+	  <tbody>
+	    <tr class="slds-hint-parent">
+	      <th data-label="Opportunity Name" scope="row">
+	        <div class="slds-truncate" title="Cloudhub">
+	          <a href="#" tabindex="-1">Cloudhub</a>
+	        </div>
+	      </th>
+	      <td data-label="Account Name">
+	        <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	      </td>
+	     
+	    </tr>
+	    <tr class="slds-hint-parent">
+	      <th data-label="Opportunity Name" scope="row">
+	        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
+	          <a href="#" tabindex="-1">Cloudhub + Anypoint Connectors</a>
+	        </div>
+	      </th>
+	      <td data-label="Account Name">
+	        <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	      </td>
+	      
+	    </tr>
+	  </tbody>
+	</table>
+</div>
+	   
 </body>
 </html>
