@@ -140,7 +140,7 @@
 	      </th>
 	      <td data-label="Account Name">
 	        <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
-	        <button class="slds-button slds-button_brand">Cloudhub</button>
+	        <button class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
 	      </td>
 	     
 	    </tr>
@@ -152,7 +152,7 @@
 	      </th>
 	      <td data-label="Account Name">
 	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
-	        <button class="slds-button slds-button_brand">Cloudhub</button>
+	        <button class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
 	      </td>
 	      
 	    </tr>
