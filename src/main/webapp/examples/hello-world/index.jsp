@@ -66,7 +66,7 @@
 			console.log("postToPlatformEvent:url"+ url);
 			var eventData = {
 				Account_Id__c: sr.context.environment.parameters.accountId,
-				Logged_In_User_Id__c: sr.context.user.userId),
+				Logged_In_User_Id__c: sr.context.user.userId,
 				Refresh_Nba__c: true	
 			};
 			console.log("postToPlatformEvent:eventData"+ JSON.stringify(eventData));
