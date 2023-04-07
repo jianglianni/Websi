@@ -106,10 +106,10 @@
 				<div class="slds-form-element">
 					<div class="slds-form-element__control">
 						<div class="slds-grid slds-gutters">
-							<div class="slds-col slds-size_3-of-6">
+							<div class="slds-col slds-size_1-of-2">
 								<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
 							</div>
-							<div class="slds-col slds-size_3-of-6">
+							<div class="slds-col slds-size_2-of-2">
 								<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
 							</div>
 						</div>
