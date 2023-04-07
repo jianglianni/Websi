@@ -139,7 +139,8 @@
 	        </div>
 	      </th>
 	      <td data-label="Account Name">
-	        <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	        <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
+	        <button class="slds-button slds-button_brand">Cloudhub</button>
 	      </td>
 	     
 	    </tr>
@@ -150,7 +151,8 @@
 	        </div>
 	      </th>
 	      <td data-label="Account Name">
-	        <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
+	        <button class="slds-button slds-button_brand">Cloudhub</button>
 	      </td>
 	      
 	    </tr>
