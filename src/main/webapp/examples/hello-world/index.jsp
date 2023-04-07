@@ -67,16 +67,16 @@
 			var url = sr.context.links.sobjectUrl + "Canvas_App_PE__e";
 			console.log("postToPlatformEvent:url="+ url);
 			var eventData = {
-				Account_Id__c: sr.context.environment.parameters.accountId,
-				Logged_In_User_Id__c: sr.context.user.userId,
-				Refresh_Nba__c: true	
+				"Account_Id__c": sr.context.environment.parameters.accountId,
+				"Logged_In_User_Id__c": sr.context.user.userId,
+				"Refresh_Nba__c": true	
 			};
-			console.log("postToPlatformEvent:eventData="+ eventData);
+			console.log("postToPlatformEvent:eventData="+ JSON.stringify(eventData));
 			Sfdc.canvas.client.ajax(url, {
 				client: sr.client,
 				method: "POST",
 				contentType: "application/json",
-				data: eventData,
+				data: JSON.stringify(eventData),
 				success: function (data) {
 					if (201 === data.status) {
 						alert("Success");
