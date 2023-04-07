@@ -91,8 +91,8 @@
     </script>
 </head>
 <body>
-	<div id="wrapper" style="text-align:center" class="slds-grid slds-gutters slds-grid_vertical">
-		<div id="container" style="display:inline-block;text-align:left" class="slds-grid slds-gutters slds-grid_vertical">
+	<div id="wrapper" style="text-align:center" >
+		<div id="container" style="display:inline-block;text-align:left" class="slds-grid slds-wrap">
 			<div class="slds-col">
 				<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
 		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.User = </h1> <p id='user'></p>
@@ -106,10 +106,10 @@
 				<div class="slds-form-element">
 					<div class="slds-form-element__control">
 						<div class="slds-grid slds-gutters">
-							<div class="slds-col slds-size_1-of-2">
+							<div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
 								<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
 							</div>
-							<div class="slds-col slds-size_2-of-2">
+							<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
 								<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
 							</div>
 						</div>
