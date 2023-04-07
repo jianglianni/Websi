@@ -79,7 +79,7 @@
 				data: JSON.stringify(eventData),
 				success: function (data) {
 					if (201 === data.status) {
-						alert("Success");
+						console.log("postToPlatformEvent Sucess");
 					}
 				},
 			});
