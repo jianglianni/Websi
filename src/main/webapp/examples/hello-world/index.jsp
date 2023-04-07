@@ -92,7 +92,7 @@
 </head>
 <body>
 	<div id="wrapper" style="text-align:center" >
-		<div id="container" style="display:inline-block;text-align:left" class="slds-grid slds-wrap">
+		<div id="container" style="display:inline-block;text-align:left" >
 			<div class="slds-col">
 				<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
 		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.User = </h1> <p id='user'></p>
