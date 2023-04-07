@@ -93,7 +93,7 @@
 <body>
 	<div id="wrapper" style="text-align:center" >
 		<div id="container" style="display:inline-block;text-align:left" >
-			<div class="slds-col">
+			<div>
 				<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
 		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.User = </h1> <p id='user'></p>
 		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Dimensions with Auto Resize = </h1> <p id='dimensions'></p>
@@ -102,11 +102,15 @@
 		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
 		    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
 	    	</div>
-	    	<div class="slds-col">
+	    	<div>
 				<div class="slds-form-element">
-					<div class="slds-form-element__control">
-						<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
-						<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
+					<div class="slds-form-element__control slds-grid slds-wrap">
+						<div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
+							<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
+						</div>
+						<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
+							<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
+						</div>
 					</div>
 				</div>
 				<h1 class="slds-text-heading_medium slds-m-around_xx-small">List of Chatter Users</h1>
