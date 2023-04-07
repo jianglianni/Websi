@@ -105,14 +105,8 @@
 	    	<div class="slds-col">
 				<div class="slds-form-element">
 					<div class="slds-form-element__control">
-						<div class="slds-grid slds-gutters">
-							<div class="slds-col">
-								<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
-							</div>
-							<div class="slds-col">
-								<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
-							</div>
-						</div>
+						<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
+						<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
 					</div>
 				</div>
 				<h1 class="slds-text-heading_medium slds-m-around_xx-small">List of Chatter Users</h1>
