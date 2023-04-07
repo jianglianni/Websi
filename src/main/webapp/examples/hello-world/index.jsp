@@ -62,7 +62,6 @@
         }
         
         function postToPlatformEvent() {
-			var post = Sfdc.canvas.byId("post").value;
 			var url = sr.context.links.sobjectUrl + "/Canvas_App_PE__e";
 			console.log("postToPlatformEvent:url"+ url);
 			var eventData = {
@@ -109,7 +108,7 @@
 								<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
 							</div>
 							<div class="slds-col slds-size_3-of-6">
-								<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent();">Post to Platform Event</button>
+								<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
 							</div>
 						</div>
 					</div>
