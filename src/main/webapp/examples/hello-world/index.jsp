@@ -75,7 +75,12 @@
 				client: sr.client,
 				success: function (data) {
 					if (data.status === 200) {
-						console.log("getAccountInsights.data="+JSON.stringify(data.payload.records));
+						console.log("getAccountInsights.data.payload.records="+JSON.stringify(data.payload.records));
+						data.payload.records.forEach((record) => {
+							console.log("record.Id="+record.Id);
+							console.log("record.Name="+record.Name);
+						
+						});
 					}
 				},
 			});
