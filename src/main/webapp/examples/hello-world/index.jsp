@@ -110,7 +110,7 @@
 							<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
 						</div>
 						<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
-							<button class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent(this)">Post to Platform Event</button>
+							<button id="button1" class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent(this)">Post to Platform Event</button>
 						</div>
 					</div>
 				</div>
@@ -141,7 +141,7 @@
 	      </th>
 	      <td data-label="Account Name">
 	        <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
-	        <button class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
+	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
 	      </td>
 	     
 	    </tr>
@@ -153,7 +153,7 @@
 	      </th>
 	      <td data-label="Account Name">
 	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
-	        <button class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
+	        <button id="button3" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
 	      </td>
 	      
 	    </tr>
