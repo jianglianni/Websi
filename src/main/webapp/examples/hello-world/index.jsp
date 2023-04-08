@@ -75,7 +75,7 @@
 				client: sr.client,
 				success: function (data) {
 					if (data.status === 200) {
-						alert("Success"+data);
+						alert("Success"+JSON.stringify(data));
 					}
 				},
 			});
