@@ -75,7 +75,7 @@
 				client: sr.client,
 				success: function (data) {
 					if (data.status === 200) {
-						alert("Success"+JSON.stringify(data));
+						console.log("getAccountInsights.data="+JSON.stringify(data));
 					}
 				},
 			});
