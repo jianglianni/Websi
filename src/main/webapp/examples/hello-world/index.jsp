@@ -64,8 +64,7 @@
         }
         
         function postToPlatformEvent(x) {
-        	alert(JSON.stringify(x));
-        	alert(x);
+        	alert(x.id);
 			var url = sr.context.links.sobjectUrl + "Canvas_App_PE__e";
 			console.log("postToPlatformEvent:url="+ url);
 			var eventData = {
