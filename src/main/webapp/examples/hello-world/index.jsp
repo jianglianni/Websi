@@ -50,10 +50,14 @@
             Sfdc.canvas.byId('accountLink').href = accountLink;
             console.log("Client:"+ sr.context.environment.dimensions.clientWidth);
             console.log("Client:"+ sr.context.environment.dimensions.clientHeight);
+            
+	        //call AccountInsights
+            getAccountInsights();
+
             Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight,width : sr.context.environment.dimensions.clientWidth});
             //Sfdc.canvas.client.resize(sr.client);
             Sfdc.canvas.client.autogrow(sr.client);
-            
+                        
         }
         
         function openAccountLink(){
@@ -62,6 +66,20 @@
         	return false;
         	
         }
+        
+        function getAccountInsights() {
+			// Get Account Insights
+			var url = sr.context.links.queryUrl + "?q=Select Id,Name From Account_Insight__c Where Account__c="+sr.context.environment.parameters.accountId+" AND Status__c=\'Open\'";
+			console.log("getAccountInsights="+url)
+			Sfdc.canvas.client.ajax(url, {
+				client: sr.client,
+				success: function (data) {
+					if (data.status === 200) {
+						alert("Success"+data);
+					}
+				},
+			});
+		}
         
         function postToPlatformEvent(x) {
         	alert(x.id);
