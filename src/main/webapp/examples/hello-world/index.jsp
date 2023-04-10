@@ -94,20 +94,32 @@
 							
 							console.log("recordIdCell="+recordIdCell);
 							
-							let recordNameCell = newInsight.insertCell(1);
+							
+							let recordNameCell = newInsight.insertCell(0);
 							let recordNameTd = document.createElement("td");
 							recordNameTd.setAttribute("data-label","Name");
-							let recordNameButton = document.createElement("button");
-							recordNameButton.id = record.Id;
-							recordNameButton.className="slds-button slds-button_brand";
-							recordNameButton.innerText = "Review Tasks";
-							recordNameButton.onclick = postToPlatformEvent;
-							recordNameTd.appendChild(recordNameButton);
+							let recordNameDiv = document.createElement("div");
+							recordNameDiv.className = "slds-truncate";
+							recordNameDiv.title = record.Name;
+							recordNameDiv.textContent = record.Name;
+							recordNameTd.appendChild(recordNameDiv);
 							recordNameCell.appendChild(recordNameTd);
-							//recordNameButton.addEventListener( "click", postToPlatformEvent(recordNameButton));
-							
-							
 							console.log("recordNameCell="+recordNameCell);
+							
+							
+							let recordTaskCell = newInsight.insertCell(1);
+							let recordTaskTd = document.createElement("td");
+							recordTaskTd.setAttribute("data-label","Review Tasks");
+							let recordNameButton = document.createElement("button");
+							recordTaskButton.id = record.Id;
+							recordTaskButton.className="slds-button slds-button_brand";
+							recordTaskButton.innerText = "Review Tasks";
+							recordTaskButton.onclick = postToPlatformEvent;
+							recordTaskTd.appendChild(recordNameButton);
+							recordTaskCell.appendChild(recordTaskTd);
+														
+							
+							console.log("recordTaskCell="+recordTaskCell);
 							
 							
 						
@@ -184,6 +196,9 @@
 		      <th class="" scope="col">
 		        <div class="slds-truncate" title="Name">Name</div>
 		      </th>
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Review Tasks">Review Tasks</div>
+		      </th>
 		    </tr>
 		  </thead>
 	  <tbody id='insight-list'>
@@ -191,21 +206,15 @@
 	      <td data-label="Id" scope="row">
 	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
 	      </td>
-	      <td data-label="Name">
+	      <td data-label="Name" scope="row">
+	       <div class="slds-truncate" title="Cloudhub">Cloudhub Name</div>
+	      </td>
+	      <td data-label="Review Tasks" scope="row">
 	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
 	      </td>
 	     
 	    </tr>
-	    <tr >
-	      <td data-label="Id" scope="row">
-	         <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
-	      </td>
-	      <td data-label="Name">
-	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
-	        <button id="button3" class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
-	      </td>
-	      
-	    </tr>
+	    
 	  </tbody>
 	</table>
 </div>
