@@ -156,7 +156,7 @@
 		    </tr>
 		  </thead>
 	  <tbody>
-	    <tr class="slds-hint-parent">
+	    <tr >
 	      <td data-label="Opportunity Name" scope="row">
 	       
 	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
@@ -168,7 +168,7 @@
 	      </td>
 	     
 	    </tr>
-	    <tr class="slds-hint-parent">
+	    <tr >
 	      <td data-label="Opportunity Name" scope="row">
 	         <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
 	      </td>
