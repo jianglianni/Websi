@@ -177,28 +177,28 @@
 		  <thead>
 		    <tr class="slds-line-height_reset">
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Opportunity Name">Opportunity Name</div>
+		        <div class="slds-truncate" title="Id">Id</div>
 		      </th>
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Account Name">Account Name</div>
+		        <div class="slds-truncate" title="Name">Name</div>
 		      </th>
 		    </tr>
 		  </thead>
 	  <tbody id='insight-list'>
 	    <tr >
-	      <td data-label="Opportunity Name" scope="row">
+	      <td data-label="Id" scope="row">
 	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
 	      </td>
-	      <td data-label="Account Name">
+	      <td data-label="Name">
 	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
 	      </td>
 	     
 	    </tr>
 	    <tr >
-	      <td data-label="Opportunity Name" scope="row">
+	      <td data-label="Id" scope="row">
 	         <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
 	      </td>
-	      <td data-label="Account Name">
+	      <td data-label="Name">
 	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
 	        <button id="button3" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
 	      </td>
