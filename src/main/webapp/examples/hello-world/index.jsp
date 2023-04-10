@@ -101,9 +101,10 @@
 							recordNameButton.id = record.Id;
 							recordNameButton.className="slds-button slds-button_brand";
 							recordNameButton.innerText = "Review Tasks";
-							recordNameButton.addEventListener( "click", "postToPlatformEvent(this)");
 							recordNameTd.appendChild(recordNameButton);
 							recordNameCell.appendChild(recordNameTd);
+							recordNameButton.addEventListener( "click", postToPlatformEvent(recordNameButton));
+							
 							
 							console.log("recordNameCell="+recordNameCell);
 							
