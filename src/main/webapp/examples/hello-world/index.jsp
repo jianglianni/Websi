@@ -86,7 +86,7 @@
 							let recordIdTd = document.createElement("td");
 							recordIdTd.setAttribute("data-label","Id");
 							let recordIdDiv = document.createElement("div");
-							recordIdDiv.class = "slds-truncate";
+							recordIdDiv.className = "slds-truncate";
 							recordIdDiv.title = record.Id;
 							recordIdDiv.textContent = record.Id;
 							recordIdTd.appendChild(recordIdDiv);
@@ -99,9 +99,9 @@
 							recordNameTd.setAttribute("data-label","Name");
 							let recordNameButton = document.createElement("button");
 							recordNameButton.id = record.Id;
-							recordNameButton.class="slds-button slds-button_brand";
-							recordNameButton.innerText = "Review Task"
-							recordNameButton.onclick="postToPlatformEvent(this)";
+							recordNameButton.className="slds-button slds-button_brand";
+							recordNameButton.innerText = "Review Task";
+							recordNameButton.addEventListener( 'click', postToPlatformEvent(this));
 							recordNameTd.appendChild(recordNameButton);
 							recordNameCell.appendChild(recordNameTd);
 							
