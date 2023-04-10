@@ -95,7 +95,7 @@
 							console.log("recordIdCell="+recordIdCell);
 							
 							
-							let recordNameCell = newInsight.insertCell(0);
+							let recordNameCell = newInsight.insertCell(1);
 							let recordNameTd = document.createElement("td");
 							recordNameTd.setAttribute("data-label","Name");
 							let recordNameDiv = document.createElement("div");
@@ -107,7 +107,7 @@
 							console.log("recordNameCell="+recordNameCell);
 							
 							
-							let recordTaskCell = newInsight.insertCell(1);
+							let recordTaskCell = newInsight.insertCell(2);
 							let recordTaskTd = document.createElement("td");
 							recordTaskTd.setAttribute("data-label","Review Tasks");
 							let recordTaskButton = document.createElement("button");
