@@ -79,6 +79,35 @@
 						data.payload.records.forEach((record) => {
 							console.log("record.Id="+record.Id);
 							console.log("record.Name="+record.Name);
+							let insightList = document.querySelector("#insight-list")
+							let newInsight = insightList.insertRow(-1);
+							console.log("newInsight="+newInsight);
+							let recordIdCell = newInsight.insertCell(0);
+							let recordIdTd = document.createElement("td");
+							recordIdTd.data-label = "Id";
+							let recordIdDiv = document.createElement("div");
+							recordIdDiv.class = "slds-truncate";
+							recordIdDiv.title = record.Id;
+							recordIdDiv.textContent = record.Id;
+							recordIdTd.appendChild(recordIdDiv);
+							recordIdCell.appendChild(recordIdTd);
+							
+							console.log("recordIdCell="+recordIdCell);
+							
+							let recordNameCell = newInsight.insertCell(1);
+							let recordNameTd = document.createElement("td");
+							recordNameTd.data-label = "Name";
+							let recordNameButton = document.createElement("button");
+							recordNameButton.id = record.Id;
+							recordNameButton.class="slds-button slds-button_brand";
+							recordNameButton.innerText = "Review Task"
+							recordNameButton.onclick="postToPlatformEvent(this)";
+							recordNameTd.appendChild(recordNameButton);
+							recordNameCell.appendChild(recordNameTd);
+							
+							console.log("recordNameCell="+recordNameCell);
+							
+							
 						
 						});
 					}
@@ -155,15 +184,12 @@
 		      </th>
 		    </tr>
 		  </thead>
-	  <tbody>
+	  <tbody id='insight-list'>
 	    <tr >
 	      <td data-label="Opportunity Name" scope="row">
-	       
 	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
-	       
 	      </td>
 	      <td data-label="Account Name">
-	        <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
 	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
 	      </td>
 	     
