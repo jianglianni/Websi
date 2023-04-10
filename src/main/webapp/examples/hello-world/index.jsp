@@ -157,11 +157,11 @@
 		  </thead>
 	  <tbody>
 	    <tr class="slds-hint-parent">
-	      <th data-label="Opportunity Name" scope="row">
-	        <div class="slds-truncate" title="Cloudhub">
-	          <a href="#" tabindex="-1">Cloudhub</a>
-	        </div>
-	      </th>
+	      <td data-label="Opportunity Name" scope="row">
+	       
+	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	       
+	      </td>
 	      <td data-label="Account Name">
 	        <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
 	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
@@ -169,11 +169,9 @@
 	     
 	    </tr>
 	    <tr class="slds-hint-parent">
-	      <th data-label="Opportunity Name" scope="row">
-	        <div class="slds-truncate" title="Cloudhub + Anypoint Connectors">
-	          <a href="#" tabindex="-1">Cloudhub + Anypoint Connectors</a>
-	        </div>
-	      </th>
+	      <td data-label="Opportunity Name" scope="row">
+	         <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	      </td>
 	      <td data-label="Account Name">
 	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
 	        <button id="button3" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
