@@ -101,9 +101,9 @@
 							recordNameButton.id = record.Id;
 							recordNameButton.className="slds-button slds-button_brand";
 							recordNameButton.innerText = "Review Tasks";
+							recordNameButton.onclick = postToPlatformEvent;
 							recordNameTd.appendChild(recordNameButton);
 							recordNameCell.appendChild(recordNameTd);
-							recordNameButton.onclick = postToPlatformEvent(recordNameButton);
 							//recordNameButton.addEventListener( "click", postToPlatformEvent(recordNameButton));
 							
 							
