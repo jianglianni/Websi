@@ -158,6 +158,40 @@
     </script>
 </head>
 <body>
+	<h1 class="slds-text-heading_medium slds-m-around_xx-small">List of Chatter Users</h1>
+				
+	<div>
+		<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
+		  <thead>
+		    <tr class="slds-line-height_reset">
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Id">Id</div>
+		      </th>
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Name">Name</div>
+		      </th>
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Review Tasks">Review Tasks</div>
+		      </th>
+		    </tr>
+		  </thead>
+	  <tbody id='insight-list'>
+	    <!--<tr >
+	      <td data-label="Id" scope="row">
+	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
+	      </td>
+	      <td data-label="Name" scope="row">
+	       <div class="slds-truncate" title="Cloudhub">Cloudhub Name</div>
+	      </td>
+	      <td data-label="Review Tasks" scope="row">
+	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
+	      </td>
+	     
+	    </tr> -->
+	    
+	  </tbody>
+	</table>
+	</div>
 	<div id="wrapper" style="text-align:center" >
 		<div id="container" style="display:inline-block;text-align:left" >
 			<div>
@@ -180,44 +214,11 @@
 						</div>
 					</div>
 				</div>
-				<h1 class="slds-text-heading_medium slds-m-around_xx-small">List of Chatter Users</h1>
-				<div id="chatter-users"></div>
 			</div>
 		 
 		</div>
 	</div>
-	<div>
-		<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
-		  <thead>
-		    <tr class="slds-line-height_reset">
-		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Id">Id</div>
-		      </th>
-		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Name">Name</div>
-		      </th>
-		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Review Tasks">Review Tasks</div>
-		      </th>
-		    </tr>
-		  </thead>
-	  <tbody id='insight-list'>
-	    <tr >
-	      <td data-label="Id" scope="row">
-	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
-	      </td>
-	      <td data-label="Name" scope="row">
-	       <div class="slds-truncate" title="Cloudhub">Cloudhub Name</div>
-	      </td>
-	      <td data-label="Review Tasks" scope="row">
-	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
-	      </td>
-	     
-	    </tr>
-	    
-	  </tbody>
-	</table>
-</div>
+	
 	   
 </body>
 </html>
