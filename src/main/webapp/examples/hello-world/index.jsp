@@ -110,12 +110,12 @@
 							let recordTaskCell = newInsight.insertCell(1);
 							let recordTaskTd = document.createElement("td");
 							recordTaskTd.setAttribute("data-label","Review Tasks");
-							let recordNameButton = document.createElement("button");
+							let recordTaskButton = document.createElement("button");
 							recordTaskButton.id = record.Id;
 							recordTaskButton.className="slds-button slds-button_brand";
 							recordTaskButton.innerText = "Review Tasks";
 							recordTaskButton.onclick = postToPlatformEvent;
-							recordTaskTd.appendChild(recordNameButton);
+							recordTaskTd.appendChild(recordTaskButton);
 							recordTaskCell.appendChild(recordTaskTd);
 														
 							
@@ -130,7 +130,7 @@
 		}
         
         function postToPlatformEvent(e) {
-        	alert(e.target.id);
+        	//alert(e.target.id);
 			var url = sr.context.links.sobjectUrl + "Canvas_App_PE__e";
 			console.log("postToPlatformEvent:url="+ url);
 			var eventData = {
