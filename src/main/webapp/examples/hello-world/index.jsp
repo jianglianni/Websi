@@ -84,7 +84,7 @@
 							console.log("newInsight="+newInsight);
 							let recordIdCell = newInsight.insertCell(0);
 							let recordIdTd = document.createElement("td");
-							recordIdTd.data-label = "Id";
+							recordIdTd.setAttributte("data-label","Id");
 							let recordIdDiv = document.createElement("div");
 							recordIdDiv.class = "slds-truncate";
 							recordIdDiv.title = record.Id;
@@ -96,7 +96,7 @@
 							
 							let recordNameCell = newInsight.insertCell(1);
 							let recordNameTd = document.createElement("td");
-							recordNameTd.data-label = "Name";
+							recordNameTd.setAttributte("data-label","Name");
 							let recordNameButton = document.createElement("button");
 							recordNameButton.id = record.Id;
 							recordNameButton.class="slds-button slds-button_brand";
