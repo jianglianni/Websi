@@ -103,7 +103,8 @@
 							recordNameButton.innerText = "Review Tasks";
 							recordNameTd.appendChild(recordNameButton);
 							recordNameCell.appendChild(recordNameTd);
-							recordNameButton.addEventListener( "click", postToPlatformEvent(recordNameButton));
+							recordNameButton.onclick = postToPlatformEvent(recordNameButton);
+							//recordNameButton.addEventListener( "click", postToPlatformEvent(recordNameButton));
 							
 							
 							console.log("recordNameCell="+recordNameCell);
