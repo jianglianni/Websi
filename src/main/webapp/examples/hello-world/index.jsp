@@ -117,8 +117,8 @@
 			});
 		}
         
-        function postToPlatformEvent(x) {
-        	alert(x.id);
+        function postToPlatformEvent(e) {
+        	alert(e.target.id);
 			var url = sr.context.links.sobjectUrl + "Canvas_App_PE__e";
 			console.log("postToPlatformEvent:url="+ url);
 			var eventData = {
@@ -164,7 +164,7 @@
 							<input type="text" class="slds-input" placeholder="Message from Canvas App" id="post" />
 						</div>
 						<div class="slds-col slds-size_1-of-1 slds-large-size_1-of-4">
-							<button id="button1" class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent(this)">Post to Platform Event</button>
+							<button id="button1" class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
 						</div>
 					</div>
 				</div>
@@ -192,7 +192,7 @@
 	       <div class="slds-truncate" title="Cloudhub">Cloudhub</div>
 	      </td>
 	      <td data-label="Name">
-	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
+	        <button id="button2" class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
 	      </td>
 	     
 	    </tr>
@@ -202,7 +202,7 @@
 	      </td>
 	      <td data-label="Name">
 	         <!--<div class="slds-truncate" title="Cloudhub">Cloudhub</div>-->
-	        <button id="button3" class="slds-button slds-button_brand" onclick="postToPlatformEvent(this)">Review Tasks</button>
+	        <button id="button3" class="slds-button slds-button_brand" onclick="postToPlatformEvent()">Review Tasks</button>
 	      </td>
 	      
 	    </tr>
