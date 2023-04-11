@@ -39,12 +39,12 @@
     		sr = JSON.parse('<%=signedRequestJson%>');
         	//console.log("SR:"+ JSON.stringify(sr) );
         	Sfdc.canvas.oauth.token(sr.oauthToken);
-        	Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
-        	Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
-            Sfdc.canvas.byId('dimensions').innerHTML = JSON.stringify(sr.context.environment.dimensions);
-            Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
-            Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
-            Sfdc.canvas.byId('accountId').innerHTML = JSON.stringify(sr.context.environment.parameters.accountId);
+        	//Sfdc.canvas.byId('application').innerHTML = JSON.stringify(sr.context.application);
+        	//Sfdc.canvas.byId('user').innerHTML = JSON.stringify(sr.context.user);
+            //Sfdc.canvas.byId('dimensions').innerHTML = JSON.stringify(sr.context.environment.dimensions);
+            //Sfdc.canvas.byId('record').innerHTML = JSON.stringify(sr.context.environment.record);
+            //Sfdc.canvas.byId('params').innerHTML = JSON.stringify(sr.context.environment.parameters);
+            //Sfdc.canvas.byId('accountId').innerHTML = JSON.stringify(sr.context.environment.parameters.accountId);
             //var accountLink = sr.client.instanceUrl +"/"+ sr.context.environment.parameters.accountId;
             //console.log("accountLink:"+ accountLink);
             //Sfdc.canvas.byId('accountLink').href = accountLink;
