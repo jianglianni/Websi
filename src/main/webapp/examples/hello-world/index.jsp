@@ -75,7 +75,7 @@
         
         function getAccountInsights() {
 			// Get Account Insights
-			var url = sr.context.links.queryUrl + "?q=Select Id,Insight_Id__c,Name From Account_Insight__c Where Account__c=\'"+sr.context.environment.parameters.accountId+"\' AND Status__c=\'Open\'";
+			var url = sr.context.links.queryUrl + "?q=Select Id,Insight_Id__c,Name From Account_Insight__c Where Account__c=\'"+sr.context.environment.parameters.accountId+"\' AND Status__c=\'Open\' Order By Name";
 			console.log("getAccountInsights="+url)
 			Sfdc.canvas.client.ajax(url, {
 				client: sr.client,
