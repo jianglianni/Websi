@@ -184,7 +184,7 @@
     </script>
 </head>
 <body>
-	<h1 class="slds-text-heading_medium slds-m-around_xx-small">List of Open Account Insights</h1>
+	<h1 class="slds-text-heading_medium slds-m-around_xx-small">Open Account Insights</h1>
 				
 	<div>
 		<table class="slds-table slds-table_cell-buffer slds-table_bordered" aria-labelledby="element-with-table-label other-element-with-table-label">
