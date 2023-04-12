@@ -202,7 +202,7 @@
 		      </th>
 		      
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Review Tasks">Review Tasks</div>
+		        <div class="slds-truncate" title="Review Tasks">Recommendation Actions</div>
 		      </th>
 		    </tr>
 		  </thead>
