@@ -75,7 +75,7 @@
         
         function getAccountInsights() {
 			// Get Account Insights
-			var url = sr.context.links.queryUrl + "?q=Select Id,Name From Account_Insight__c Where Account__c=\'"+sr.context.environment.parameters.accountId+"\' AND Status__c=\'Open\'";
+			var url = sr.context.links.queryUrl + "?q=Select Id,Insight_Id__c,Name From Account_Insight__c Where Account__c=\'"+sr.context.environment.parameters.accountId+"\' AND Status__c=\'Open\'";
 			console.log("getAccountInsights="+url)
 			Sfdc.canvas.client.ajax(url, {
 				client: sr.client,
@@ -88,7 +88,21 @@
 							let insightList = document.querySelector("#insight-list")
 							let newInsight = insightList.insertRow(-1);
 							console.log("newInsight="+newInsight);
-							let recordIdCell = newInsight.insertCell(0);
+							//Name
+							let recordNameCell = newInsight.insertCell(0);
+							let recordNameTd = document.createElement("td");
+							recordNameTd.setAttribute("data-label","Name");
+							let recordNameDiv = document.createElement("div");
+							recordNameDiv.className = "slds-truncate";
+							recordNameDiv.title = record.Name;
+							recordNameDiv.textContent = record.Name;
+							recordNameTd.appendChild(recordNameDiv);
+							recordNameCell.appendChild(recordNameTd);
+							console.log("recordNameCell="+recordNameCell);
+							
+							
+							//Id
+							let recordIdCell = newInsight.insertCell(1);
 							let recordIdTd = document.createElement("td");
 							recordIdTd.setAttribute("data-label","Id");
 							let recordIdDiv = document.createElement("div");
@@ -101,19 +115,22 @@
 							console.log("recordIdCell="+recordIdCell);
 							
 							
-							let recordNameCell = newInsight.insertCell(1);
-							let recordNameTd = document.createElement("td");
-							recordNameTd.setAttribute("data-label","Name");
-							let recordNameDiv = document.createElement("div");
-							recordNameDiv.className = "slds-truncate";
-							recordNameDiv.title = record.Name;
-							recordNameDiv.textContent = record.Name;
-							recordNameTd.appendChild(recordNameDiv);
-							recordNameCell.appendChild(recordNameTd);
-							console.log("recordNameCell="+recordNameCell);
+							//Insight Id
+							let insightIdCell = newInsight.insertCell(2);
+							let insightIdTd = document.createElement("td");
+							insightIdTd.setAttribute("data-label","Insight Id");
+							let insightIdDiv = document.createElement("div");
+							insightIdDiv.className = "slds-truncate";
+							insightIdDiv.title = record.Insight_Id__c;
+							insightIdDiv.textContent = record.Insight_Id__c;
+							insightIdTd.appendChild(insightIdDiv);
+							insightIdCell.appendChild(insightIdTd);
+							
+							console.log("insightIdCell="+insightIdCell);
 							
 							
-							let recordTaskCell = newInsight.insertCell(2);
+							//Review Tasks
+							let recordTaskCell = newInsight.insertCell(3);
 							let recordTaskTd = document.createElement("td");
 							recordTaskTd.setAttribute("data-label","Review Tasks");
 							let recordTaskButton = document.createElement("button");
@@ -172,11 +189,16 @@
 		  <thead>
 		    <tr class="slds-line-height_reset">
 		      <th class="" scope="col">
+		        <div class="slds-truncate" title="Name">Name</div>
+		      </th>
+		      
+		      <th class="" scope="col">
 		        <div class="slds-truncate" title="Id">Id</div>
 		      </th>
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Name">Name</div>
+		        <div class="slds-truncate" title="Insight Id">Insight Id</div>
 		      </th>
+		      
 		      <th class="" scope="col">
 		        <div class="slds-truncate" title="Review Tasks">Review Tasks</div>
 		      </th>
