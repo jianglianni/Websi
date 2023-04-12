@@ -132,12 +132,12 @@
 							//Review Tasks
 							let recordTaskCell = newInsight.insertCell(3);
 							let recordTaskTd = document.createElement("td");
-							recordTaskTd.setAttribute("data-label","Review Tasks");
+							recordTaskTd.setAttribute("data-label","Recommended Actions");
 							let recordTaskButton = document.createElement("button");
 							recordTaskButton.id = record.Id;
 							recordTaskButton.value = record.Insight_Id__c;
 							recordTaskButton.className="slds-button slds-button_brand";
-							recordTaskButton.innerText = "Review Tasks";
+							recordTaskButton.innerText = "Recommended Actions";
 							recordTaskButton.onclick = postToPlatformEvent;
 							recordTaskTd.appendChild(recordTaskButton);
 							recordTaskCell.appendChild(recordTaskTd);
@@ -202,7 +202,7 @@
 		      </th>
 		      
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Review Tasks">Recommendation Actions</div>
+		        <div class="slds-truncate" title="Recommended Actions">Recommended Actions</div>
 		      </th>
 		    </tr>
 		  </thead>
