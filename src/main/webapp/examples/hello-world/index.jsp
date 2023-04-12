@@ -135,6 +135,7 @@
 							recordTaskTd.setAttribute("data-label","Review Tasks");
 							let recordTaskButton = document.createElement("button");
 							recordTaskButton.id = record.Id;
+							recordTaskButton.value = record.Insight_Id__c;
 							recordTaskButton.className="slds-button slds-button_brand";
 							recordTaskButton.innerText = "Review Tasks";
 							recordTaskButton.onclick = postToPlatformEvent;
@@ -159,7 +160,8 @@
 			var eventData = {
 				"Account_Id__c": sr.context.environment.parameters.accountId,
 				"Logged_In_User_Id__c": sr.context.user.userId,
-				"Insight_Id__c":e.target.id,
+				"Account_Insight_Id__c":e.target.id,
+				"Insight_Id__c":e.target.value,
 				"Refresh_Nba__c": true	
 			};
 			console.log("postToPlatformEvent:eventData="+ JSON.stringify(eventData));
