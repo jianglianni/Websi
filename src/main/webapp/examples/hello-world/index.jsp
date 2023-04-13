@@ -41,7 +41,7 @@
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	
         	
-        	populateContextValues(sr);
+        	//populateContextValues(sr);
 	        
         	getAccountInsights();
 
@@ -223,7 +223,7 @@
 	  </tbody>
 	</table>
 	</div>
-	<div id="wrapper" style="text-align:center" >
+	<!-- <div id="wrapper" style="text-align:center" >
 			<div id="container" style="display:inline-block;text-align:left" >
 				<div>
 					<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
@@ -247,7 +247,7 @@
 					</div>
 				</div>
 		 	</div>
-	</div>
+	</div>  -->
 	
 	   
 </body>
