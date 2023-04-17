@@ -148,7 +148,7 @@
 
 							//Review Tasks- SE
 							let peRecordTaskCell = newInsight.insertCell(4);
-							let peRrecordTaskTd = document.createElement("td");
+							let peRecordTaskTd = document.createElement("td");
 							peRecordTaskTd.setAttribute("data-label","PE Recommended Actions");
 							let peRecordTaskButton = document.createElement("button");
 							peRecordTaskButton.id = record.Id;
