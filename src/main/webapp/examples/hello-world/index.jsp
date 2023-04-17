@@ -182,7 +182,7 @@
         
         function updateCanvasAppEvent(e) {
         	//alert(e.target.id);
-			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c/"+canvasAppEventId;
+			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c/"+sr.context.environment.parameters.canvasAppEventId;
 			console.log("updateCanvasAppEvent:url="+ url);
 			var updateData = {
 				"Account_Insight__c":e.target.value
@@ -195,7 +195,7 @@
 				contentType: "application/json",
 				data: JSON.stringify(updateData),
 				success: function (data) {
-					if (201 === data.status) {
+					if (204 === data.status) {
 						console.log("updateCanvasAppEvent Sucess");
 					}
 				},
