@@ -182,17 +182,16 @@
         
         function updateCanvasAppEvent(e) {
         	//alert(e.target.id);
-			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c";
-			console.log("postToPlatformEvent:url="+ url);
+			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c/"+canvasAppEventId;
+			console.log("updateCanvasAppEvent:url="+ url);
 			var updateData = {
-				"Id": canvasAppEventId,
 				"Account_Insight__c":e.target.value
 					
 			};
 			console.log("updateCanvasAppEvent:updateData="+ JSON.stringify(updateData));
 			Sfdc.canvas.client.ajax(url, {
 				client: sr.client,
-				method: "POST",
+				method: "PATCH",
 				contentType: "application/json",
 				data: JSON.stringify(updateData),
 				success: function (data) {
