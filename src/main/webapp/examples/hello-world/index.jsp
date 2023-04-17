@@ -34,7 +34,6 @@
         
     	
     	var sr = {};
-    	var canvasAppEventId = '';
     	
         function canvasCallback(){
     		sr = JSON.parse('<%=signedRequestJson%>');
