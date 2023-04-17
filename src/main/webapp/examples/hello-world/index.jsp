@@ -34,13 +34,14 @@
         
     	
     	var sr = {};
+    	var canvasAppEventId = '';
     	
         function canvasCallback(){
     		sr = JSON.parse('<%=signedRequestJson%>');
         	//console.log("SR:"+ JSON.stringify(sr) );
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	
-        	
+        	canvasAppEventId = sr.context.environment.parameters.canvasAppEventId;
         	//populateContextValues(sr);
 	        
         	getAccountInsights();
@@ -138,7 +139,8 @@
 							recordTaskButton.value = record.Insight_Id__c;
 							recordTaskButton.className="slds-button slds-button_brand";
 							recordTaskButton.innerText = "Recommended Actions";
-							recordTaskButton.onclick = postToPlatformEvent;
+							//recordTaskButton.onclick = postToPlatformEvent;
+							recordTaskButton.onclick = updateCanvasAppEvent;
 							recordTaskTd.appendChild(recordTaskButton);
 							recordTaskCell.appendChild(recordTaskTd);
 														
@@ -173,6 +175,29 @@
 				success: function (data) {
 					if (201 === data.status) {
 						console.log("postToPlatformEvent Sucess");
+					}
+				},
+			});
+		}
+        
+        function updateCanvasAppEvent(e) {
+        	//alert(e.target.id);
+			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c";
+			console.log("postToPlatformEvent:url="+ url);
+			var updateData = {
+				"Id": canvasAppEventId,
+				"Account_Insight__c":e.target.value
+					
+			};
+			console.log("updateCanvasAppEvent:updateData="+ JSON.stringify(updateData));
+			Sfdc.canvas.client.ajax(url, {
+				client: sr.client,
+				method: "POST",
+				contentType: "application/json",
+				data: JSON.stringify(updateData),
+				success: function (data) {
+					if (201 === data.status) {
+						console.log("updateCanvasAppEvent Sucess");
 					}
 				},
 			});
