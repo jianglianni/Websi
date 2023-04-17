@@ -185,7 +185,7 @@
 			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c/"+sr.context.environment.parameters.canvasAppEventId;
 			console.log("updateCanvasAppEvent:url="+ url);
 			var updateData = {
-				"Account_Insight__c":e.target.value
+				"Account_Insight__c":e.target.id
 					
 			};
 			console.log("updateCanvasAppEvent:updateData="+ JSON.stringify(updateData));
