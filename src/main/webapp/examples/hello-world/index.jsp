@@ -129,22 +129,35 @@
 							console.log("insightIdCell="+insightIdCell);
 							
 							
-							//Review Tasks
+							//Review Tasks- SE
 							let recordTaskCell = newInsight.insertCell(3);
 							let recordTaskTd = document.createElement("td");
-							recordTaskTd.setAttribute("data-label","Recommended Actions");
+							recordTaskTd.setAttribute("data-label","SE Recommended Actions");
 							let recordTaskButton = document.createElement("button");
 							recordTaskButton.id = record.Id;
 							recordTaskButton.value = record.Insight_Id__c;
 							recordTaskButton.className="slds-button slds-button_brand";
-							recordTaskButton.innerText = "Recommended Actions";
-							//recordTaskButton.onclick = postToPlatformEvent;
+							recordTaskButton.innerText = "SE Recommended Actions";
 							recordTaskButton.onclick = updateCanvasAppEvent;
 							recordTaskTd.appendChild(recordTaskButton);
 							recordTaskCell.appendChild(recordTaskTd);
 														
 							
 							console.log("recordTaskCell="+recordTaskCell);
+							
+
+							//Review Tasks- SE
+							let peRecordTaskCell = newInsight.insertCell(4);
+							let peRrecordTaskTd = document.createElement("td");
+							peRecordTaskTd.setAttribute("data-label","PE Recommended Actions");
+							let peRecordTaskButton = document.createElement("button");
+							peRecordTaskButton.id = record.Id;
+							peRecordTaskButton.value = record.Insight_Id__c;
+							peRecordTaskButton.className="slds-button slds-button_brand";
+							peRecordTaskButton.innerText = "PE Recommended Actions";
+							peRecordTaskButton.onclick = postToPlatformEvent;
+							peRecordTaskTd.appendChild(peRecordTaskButton);
+							peRecordTaskCell.appendChild(peRecordTaskTd);
 							
 							
 						
@@ -225,7 +238,10 @@
 		      </th>
 		      
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="Recommended Actions">Recommended Actions</div>
+		        <div class="slds-truncate" title="SE Recommended Actions">SE Recommended Actions</div>
+		      </th>
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="PE Recommended Actions">PE Recommended Actions</div>
 		      </th>
 		    </tr>
 		  </thead>
