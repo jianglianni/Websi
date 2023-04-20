@@ -47,7 +47,7 @@
 
             console.log("Client:"+ sr.context.environment.dimensions.clientWidth);
             console.log("Client:"+ sr.context.environment.dimensions.clientHeight);
-             Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight,width : sr.context.environment.dimensions.clientWidth});
+            Sfdc.canvas.client.resize(sr.client, {height : sr.context.environment.dimensions.clientHeight,width : sr.context.environment.dimensions.clientWidth});
             //Sfdc.canvas.client.resize(sr.client);
             Sfdc.canvas.client.autogrow(sr.client);
                         
@@ -193,13 +193,20 @@
 		}
         
         function updateCanvasAppEvent(e) {
+        	
         	//alert(e.target.id);
+        	
+        	
 			var url = sr.context.links.sobjectUrl + "Canvas_App_Event__c/"+sr.context.environment.parameters.canvasAppEventId;
 			console.log("updateCanvasAppEvent:url="+ url);
 			var updateData = {
 				"Account_Insight__c":e.target.id
 					
 			};
+			// Target all canvas apps.
+    		Sfdc.canvas.controller.publish({name : 'sfgbi.sendVal',payload : JSON.stringify(updateData)});
+    		alert('CanvasApp Publised Event');
+        	
 			console.log("updateCanvasAppEvent:updateData="+ JSON.stringify(updateData));
 			Sfdc.canvas.client.ajax(url, {
 				client: sr.client,
@@ -213,6 +220,14 @@
 				},
 			});
 		}
+        
+        function onComplete(){
+        	
+        }
+        
+		function onData(){
+        	
+        }
 
         Sfdc.canvas(canvasCallback);
         
