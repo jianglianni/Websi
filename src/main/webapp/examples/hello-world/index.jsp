@@ -203,9 +203,10 @@
 				"Account_Insight__c":e.target.id
 					
 			};
-			// Target all canvas apps.
-    		Sfdc.canvas.client.publish(sr.client,{name : 'sfgbi.sendVal',payload : JSON.stringify(updateData)});
-    		alert('CanvasApp Publised Event');
+			// Send canvas javascript event.
+    		//Sfdc.canvas.client.publish(sr.client,{name : 'sfgbi.sendVal',payload : JSON.stringify(updateData)});
+    		//alert('CanvasApp Publised Event');
+    		sendCanvasAppEventLM(e);
         	
 			console.log("updateCanvasAppEvent:updateData="+ JSON.stringify(updateData));
 			Sfdc.canvas.client.ajax(url, {
@@ -219,6 +220,26 @@
 					}
 				},
 			});
+		}
+        
+		function sendCanvasAppEventLM(e) {
+        	
+        	//alert(e.target.id);
+        	
+        	let eventChannel = 'sfgbi.sendVal';
+			var eventData = {
+					"accountId": sr.context.environment.parameters.accountId,
+					"loggedInUserId": sr.context.user.userId,
+					"accountInsightId":e.target.id,
+					"insightId":e.target.value
+					
+			};
+			// Target all canvas apps.
+    		Sfdc.canvas.client.publish(sr.client,{name : 'sfgbi.sendVal',payload : JSON.stringify(updateData)});
+    		alert('CanvasApp Publised Canvas Event');
+        	
+			console.log("sendCanvasAppEventLM="+ JSON.stringify(eventData));
+			
 		}
         
         function onComplete(){
