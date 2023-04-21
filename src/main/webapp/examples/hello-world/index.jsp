@@ -125,29 +125,41 @@
 							insightIdDiv.textContent = record.Insight_Id__c;
 							insightIdTd.appendChild(insightIdDiv);
 							insightIdCell.appendChild(insightIdTd);
-							
 							console.log("insightIdCell="+insightIdCell);
 							
+								
+							//Review Tasks- LM
+							let lmRecordTaskCell = newInsight.insertCell(3);
+							let lmRecordTaskTd = document.createElement("td");
+							lmRecordTaskTd.setAttribute("data-label","LM Recommended Actions");
+							let lmRecordTaskButton = document.createElement("button");
+							lmRecordTaskButton.id = record.Id;
+							lmRecordTaskButton.value = record.Insight_Id__c;
+							lmRecordTaskButton.className="slds-button slds-button_brand";
+							lmRecordTaskButton.innerText = "LM Recommended Actions";
+							lmRecordTaskButton.onclick = sendCanvasAppEventLM;
+							lmRecordTaskTd.appendChild(lmRecordTaskButton);
+							lmRecordTaskCell.appendChild(lmRecordTaskTd);
+							console.log("lmRecordTaskCell="+lmRecordTaskCell);
+							
 							
 							//Review Tasks- SE
-							let recordTaskCell = newInsight.insertCell(3);
-							let recordTaskTd = document.createElement("td");
-							recordTaskTd.setAttribute("data-label","SE Recommended Actions");
-							let recordTaskButton = document.createElement("button");
-							recordTaskButton.id = record.Id;
-							recordTaskButton.value = record.Insight_Id__c;
-							recordTaskButton.className="slds-button slds-button_brand";
-							recordTaskButton.innerText = "SE Recommended Actions";
-							recordTaskButton.onclick = updateCanvasAppEvent;
-							recordTaskTd.appendChild(recordTaskButton);
-							recordTaskCell.appendChild(recordTaskTd);
-														
-							
-							console.log("recordTaskCell="+recordTaskCell);
+							let seRecordTaskCell = newInsight.insertCell(4);
+							let seRecordTaskTd = document.createElement("td");
+							seRecordTaskTd.setAttribute("data-label","SE Recommended Actions");
+							let seRecordTaskButton = document.createElement("button");
+							seRecordTaskButton.id = record.Id;
+							seRecordTaskButton.value = record.Insight_Id__c;
+							seRecordTaskButton.className="slds-button slds-button_brand";
+							seRecordTaskButton.innerText = "SE Recommended Actions";
+							seRecordTaskButton.onclick = updateCanvasAppEvent;
+							seRecordTaskTd.appendChild(seRecordTaskButton);
+							seRecordTaskCell.appendChild(seRecordTaskTd);
+							console.log("seRecordTaskCell="+seRecordTaskCell);
 							
 
-							//Review Tasks- SE
-							let peRecordTaskCell = newInsight.insertCell(4);
+							//Review Tasks- PE
+							let peRecordTaskCell = newInsight.insertCell(5);
 							let peRecordTaskTd = document.createElement("td");
 							peRecordTaskTd.setAttribute("data-label","PE Recommended Actions");
 							let peRecordTaskButton = document.createElement("button");
@@ -158,6 +170,7 @@
 							peRecordTaskButton.onclick = postToPlatformEvent;
 							peRecordTaskTd.appendChild(peRecordTaskButton);
 							peRecordTaskCell.appendChild(peRecordTaskTd);
+							console.log("peRecordTaskCell="+peRecordTaskCell);
 							
 							
 						
@@ -206,7 +219,7 @@
 			// Send canvas javascript event.
     		//Sfdc.canvas.client.publish(sr.client,{name : 'sfgbi.sendVal',payload : JSON.stringify(updateData)});
     		//alert('CanvasApp Publised Event');
-    		sendCanvasAppEventLM(e);
+    		//sendCanvasAppEventLM(e);
         	
 			console.log("updateCanvasAppEvent:updateData="+ JSON.stringify(updateData));
 			Sfdc.canvas.client.ajax(url, {
@@ -272,7 +285,9 @@
 		      <th class="" scope="col">
 		        <div class="slds-truncate" title="Insight Id">Insight Id</div>
 		      </th>
-		      
+		      <th class="" scope="col">
+		        <div class="slds-truncate" title="LM Recommended Actions">LM Recommended Actions</div>
+		      </th>
 		      <th class="" scope="col">
 		        <div class="slds-truncate" title="SE Recommended Actions">SE Recommended Actions</div>
 		      </th>
