@@ -228,10 +228,10 @@
         	
         	let eventChannel = 'sfgbi.sendVal';
 			var eventData = {
-					"accountId": sr.context.environment.parameters.accountId,
-					"loggedInUserId": sr.context.user.userId,
-					"accountInsightId":e.target.id,
-					"insightId":e.target.value
+					accountId: sr.context.environment.parameters.accountId,
+					loggedInUserId: sr.context.user.userId,
+					accountInsightId: e.target.id,
+					insightId: e.target.value
 					
 			};
 			// Target all canvas apps.
