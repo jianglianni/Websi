@@ -235,7 +235,7 @@
 					
 			};
 			// Target all canvas apps.
-    		Sfdc.canvas.client.publish(sr.client,{name : 'sfgbi.sendVal',payload : JSON.stringify(eventData)});
+    		Sfdc.canvas.client.publish(sr.client,{name : 'sfgbi.sendVal',payload : eventData});
     		alert('CanvasApp Publised Canvas Event');
         	
 			console.log("sendCanvasAppEventLM="+ JSON.stringify(eventData));
