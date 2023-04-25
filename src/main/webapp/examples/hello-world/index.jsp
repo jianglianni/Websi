@@ -41,7 +41,7 @@
         	Sfdc.canvas.oauth.token(sr.oauthToken);
         	
         	canvasAppEventId = sr.context.environment.parameters.canvasAppEventId;
-        	//populateContextValues(sr);
+        	populateContextValues(sr);
 	        
         	getAccountInsights();
 
@@ -131,7 +131,7 @@
 							//Review Tasks- LM
 							let lmRecordTaskCell = newInsight.insertCell(3);
 							let lmRecordTaskTd = document.createElement("td");
-							lmRecordTaskTd.setAttribute("data-label","LM Recommended Actions");
+							lmRecordTaskTd.setAttribute("data-label","Javascript/Lightning Message");
 							let lmRecordTaskButton = document.createElement("button");
 							lmRecordTaskButton.id = record.Id;
 							lmRecordTaskButton.value = record.Insight_Id__c;
@@ -146,7 +146,7 @@
 							//Review Tasks- SE
 							let seRecordTaskCell = newInsight.insertCell(4);
 							let seRecordTaskTd = document.createElement("td");
-							seRecordTaskTd.setAttribute("data-label","SE Recommended Actions");
+							seRecordTaskTd.setAttribute("data-label","Push Topic");
 							let seRecordTaskButton = document.createElement("button");
 							seRecordTaskButton.id = record.Id;
 							seRecordTaskButton.value = record.Insight_Id__c;
@@ -161,7 +161,7 @@
 							//Review Tasks- PE
 							let peRecordTaskCell = newInsight.insertCell(5);
 							let peRecordTaskTd = document.createElement("td");
-							peRecordTaskTd.setAttribute("data-label","PE Recommended Actions");
+							peRecordTaskTd.setAttribute("data-label","Platform Event");
 							let peRecordTaskButton = document.createElement("button");
 							peRecordTaskButton.id = record.Id;
 							peRecordTaskButton.value = record.Insight_Id__c;
@@ -286,13 +286,13 @@
 		        <div class="slds-truncate" title="Insight Id">Insight Id</div>
 		      </th>
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="LM Recommended Actions">LM Recommended Actions</div>
+		        <div class="slds-truncate" title="Javascript/Lightning Message">Javascript/Lightning Message</div>
 		      </th>
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="SE Recommended Actions">SE Recommended Actions</div>
+		        <div class="slds-truncate" title="Push Topic">Push Topic</div>
 		      </th>
 		      <th class="" scope="col">
-		        <div class="slds-truncate" title="PE Recommended Actions">PE Recommended Actions</div>
+		        <div class="slds-truncate" title="Platform Event">Platform Event</div>
 		      </th>
 		    </tr>
 		  </thead>
@@ -313,7 +313,8 @@
 	  </tbody>
 	</table>
 	</div>
-	<!-- <div id="wrapper" style="text-align:center" >
+	<!--  Display context/input params -->
+	<div id="wrapper" style="text-align:center" >
 			<div id="container" style="display:inline-block;text-align:left" >
 				<div>
 					<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Application = </h1> <p id='application'></p>
@@ -337,8 +338,8 @@
 					</div>
 				</div>
 		 	</div>
-	</div>  -->
-	
+	</div>
+	<!--  Display context/input params -->
 	   
 </body>
 </html>
