@@ -313,7 +313,7 @@
 	  </tbody>
 	</table>
 	</div>
-	<!--  Display context/input params -->
+	
 	<div id="wrapper" style="text-align:center" >
 			<div id="container" style="display:inline-block;text-align:left" >
 				<div>
@@ -327,8 +327,8 @@
 			    </div>
 	    	 	
 			</div>
+	</div>
 	</div> 
-	<!--  Display context/input params -->
 	   
 </body>
 </html>
