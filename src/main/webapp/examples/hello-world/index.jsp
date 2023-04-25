@@ -323,10 +323,11 @@
 			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Record = </h1> <p id='record'></p>
 			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters = </h1> <p id='params'></p>
 			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
+			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
+	    		
 			    </div>
 	    	 	<!-- <div>
-	    	 	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
-	    		
+	    	 	
 					<div class="slds-form-element">
 						<div class="slds-form-element__control slds-grid slds-wrap">
 							<div class="slds-col slds-size_1-of-1 slds-large-size_3-of-4">
@@ -336,8 +337,8 @@
 								<button id="button1" class="slds-button slds-button_brand" type="button" onclick="postToPlatformEvent()">Post to Platform Event</button>
 							</div>
 						</div>
-					</div>
-				</div> -->
+					</div>-->
+				</div>
 		 	</div> 
 	</div>
 	<!--  Display context/input params -->
