@@ -313,7 +313,7 @@
 	  </tbody>
 	</table>
 	</div>
-	
+	<!--  Display context/input params -->
 	<div id="wrapper" style="text-align:center" >
 			<div id="container" style="display:inline-block;text-align:left" >
 				<div>
@@ -323,12 +323,14 @@
 			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Environment.Record = </h1> <p id='record'></p>
 			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters = </h1> <p id='params'></p>
 			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">Context.Enviroment.Parameters.accountId = </h1> <p id='accountId'></p>
-			 	
+			    	<h1 class="slds-text-heading_large slds-m-bottom_xx-small">AccountLink</h1> <a id=accountLink href="https://www.w3schools.com" target="popup" onClick="openAccountLink()">Open AccountLink</a>
+	    		
 			    </div>
 	    	 	
 			</div>
-	</div>
 	</div> 
+	</div>
+	<!--  Display context/input params -->
 	   
 </body>
 </html>
