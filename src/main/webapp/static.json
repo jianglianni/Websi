@@ -1,8 +1,8 @@
 {
   "headers": {
-    "/": {
-    	"frame-ancestors": "Self",
-    	 "X-Frame-Options": "SAMEORIGIN"
+    "/**": {
+    	 "Content-Security-Policy": "frame-ancestors 'self'",
+    	 "X-Frame-Options": "DENY"
         
    	}
     
