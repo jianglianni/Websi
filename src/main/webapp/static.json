@@ -1,9 +1,9 @@
 {
   "headers": {
     "/": {
-          " Content-Security-Policy": {
-      			"frame-ancestors": "Self"
-      	  }
+    	"frame-ancestors": "Self",
+    	 "X-Frame-Options": "SAMEORIGIN"
+        
    	}
     
   },
