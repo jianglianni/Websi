@@ -1,8 +1,11 @@
 {
   "headers": {
     "/": {
-      "Cache-Control": "no-store, no-cache"
-    }
+          " Content-Security-Policy": {
+      			"frame-ancestors": "Self"
+      	  }
+   	}
+    
   },
   "https_only": true
   
