@@ -1,0 +1,226 @@
+/* Student Name:Jianglian Ni, Student Number:041056487*/
+
+body
+{
+    background-color: rgb(252, 239, 237); 
+}
+/*
+* The style of header 
+*/
+.headerTemplate 
+{
+  background-color: rgb(252, 239, 237);
+  margin:0 auto; 
+  border-radius: 15px;
+  max-width: 80%;
+  min-width: 400px;
+}
+/*
+* The style of body template with min width for mobile and max width for large screen 
+*/
+.template
+{
+    background-color: #ffffff;
+    margin: auto; 
+    border-radius: 15px;
+    max-width: 80%;
+    min-width: 400px;
+}
+/*
+* The style navigation bar
+*/
+.nav
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fc764d;
+    border-radius: 15px 15px 0px 0px;
+}
+
+.nav li 
+{
+  float: left;
+  font-size:x-large;
+}
+
+.nav li a 
+{
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 30px;
+  margin-left:30px;
+  text-decoration: none;
+}
+
+li a:hover 
+{
+  color: white;
+}
+
+img
+{
+  width:100%;
+}
+
+h1
+{
+  font-size:xx-large;
+  font-weight:bold;
+  line-height:inherit;
+}
+
+.myInfo
+{
+  padding: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.experience
+{
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.course
+{
+  display: flex;
+  
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.filter
+{
+  padding: 15px;
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+
+.light
+{
+  font-size: small;
+  font-weight:lighter;
+  color: grey;
+  line-height: normal;
+  margin-top: 15px;
+}
+
+.algonquin
+{
+  float:right;
+  width: 20%;
+}
+
+.about
+{
+  padding: 15px;
+  margin-top: 15px;
+  border-radius: 0px 0px 15px 15px ;
+}
+
+#active
+{
+  color: white;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+.work
+{
+  height: 200px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+/*
+* The style for images of resume page
+*/
+.workIcon
+{
+  max-width: 80px;
+  min-width: 20px;
+  margin-right: 10px;
+}
+/*
+* The style for images of course page
+*/
+.courseIcon
+{
+  width: 100px;
+  height: 100px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+
+.workDes
+{
+  float:right;
+}
+
+.arrow
+{
+  width: 20px;
+}
+
+label {
+  position: relative;
+}
+
+#search
+{
+  max-width: 300px;
+  min-width: 80px;
+  height: 25px;
+}
+
+#searchButton
+{
+  height: 30px;
+}
+/*
+* The style for footer
+*/
+.footerTemplate
+{
+  background-color: #ffffff;
+  margin:0 auto; 
+  max-width: 80%;
+  min-width: 400px;
+  border-radius: 15px 15px 0px 0px;
+}
+.footer
+{
+  height: 40px;
+  background-color: #fc764d;
+  border-radius: 0px 0px 15px 15px ;
+  text-align: center;
+}
+.back
+{
+  height: 40px;
+  background-color: #fc764d;
+  border-radius: 0px 0px 15px 15px ;
+  text-align: center;
+  padding-top: 10px;
+  color: #ffffff;
+  font-size: large;
+}
+.back a
+{
+    color: #ffffff;
+}

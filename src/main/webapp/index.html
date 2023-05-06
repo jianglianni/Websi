@@ -1,135 +1,76 @@
 <!--
-Copyright (c) 2011, salesforce.com, inc.
-All rights reserved.
+    Name: Jianglian Ni
+     Date: 25/10/2022
+    Section:CST 8285 section 301
+    This is the index.html page for Web programming assignment1.This assignment focus on how to create a personal website via CSS and html.
+ -->
 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided
-that the following conditions are met:
-
-   Redistributions of source code must retain the above copyright notice, this list of conditions and the
-   following disclaimer.
-
-   Redistributions in binary form must reproduce the above copyright notice, this list of conditions and
-   the following disclaimer in the documentation and/or other materials provided with the distribution.
-
-   Neither the name of salesforce.com, inc. nor the names of its contributors may be used to endorse or
-   promote products derived from this software without specific prior written permission.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
-WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
-PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR
-ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED
-TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
-HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
-NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
-POSSIBILITY OF SUCH DAMAGE.
--->
-<!DOCTYPE html>
-<html>
+ <!DOCTYPE html>
+ <html lang="en">
     <head>
-        <title>Salesforce Canvas SDK</title>
-        <style type="text/css" media="screen">
-body {
-    margin: 0;
-    margin-bottom: 0;
-    margin-top: 0;
-    padding: 10px;
-    background-color: #FFFFFF;
-    font-family: "Arial", "Helvetica", "sans-serif";
-    font-size: 75%;
-    color: #222222
-}
-
-h1 {
-    font-size: 28px;
-    color: #000
-}
-
-#page {
-    background-color: #FFFFFF;
-    width: 800px;
-    margin: 0;
-    margin-left: 0;
-    margin-right: 0
-}
-
-#content {
-    float: left;
-    background-color: white;
-    border: 3px solid #aaa;
-    padding: 25px;
-    width: 700px
-}
-
-#header {
-    padding-left: 75px;
-    padding-right: 30px
-}
-
-#header h1, #header h2 {
-    margin: 0
-}
-
-#canvas-content {
-    border-top: 1px solid #ccc;
-    margin-top: 20px;
-    padding-top: 0
-}
-
-#footer {
-    clear: both
-}
-
-#header {
-    background-image: url("/images/java.png");
-    background-repeat: no-repeat;
-    background-position: top left;
-    height: 64px
-}
-
-#canvas-content h1 {
-    margin: 0;
-    font-size: 20px
-}
-
-#canvas-content h2 {
-    margin: 0;
-    font-size: 14px;
-    font-weight: normal;
-    color: #333;
-    margin-bottom: 25px
-}
-
-#canvas-content a
-{
-    color: #333;
-    text-decoration: none;
-}
-
-#canvas-content a:hover
-{
-    color: #199BD2;
-    text-decoration: none;
-}
-        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Ni Jianglian">
+        <meta name=" desctription " content=" home page of assignment1 ">
+        <meta name=" keywords " content=" ,homepage,assignmen1,cst8285,htmlcode ">
+        <link rel="stylesheet" type="text/css" href="assignment.css">
+        <title>home</title>
     </head>
     <body>
-      <div id="page">
-        <div id="content">
-          <div id="header">
-            <h1>Welcome to Canvas SDK</h1>
-          </div>
-          <div id="canvas-content">
-              <h2>
-                  <br/>
-                  Your sample Java application is up and running.
-                  <p/>
-                  For more information on Salesforce Canvas Framework, please visit
-                  our <a target="_blank" title="Developer Documentation" href="http://developer.force.com"><strong>developer documentation.</strong></a>
-              </h2>
-          </div>
+        <!--Navigation section
+        -->
+        <div class="template">
+            <ul class="nav">
+                <li><a id="active" href="index.html">Home</a></li>
+                <li><a href="Resume.html">Resume</a></li>
+                <li><a href="Course.html">Course</a></li>
+            </ul>
+            <img class="maple" src="img/maple.jpg" alt="Jianglian's photo">
+            <div class="myInfo">
+                <div>
+                    <h1>JIANGLIAN NI</h1>    
+                    <span>
+                        Computer programming Student at Algonquin College
+                    </span>
+                    <br>
+                    <div class="light">
+                        Ottawa, Ontario, Canada
+                    </div>
+                </div>
+                <div class="algonquin">
+                    <a href="https://www.algonquincollege.com/"><img src="img/Algonquin.png" alt="Algonquin’s picture"></a>
+                </div>
+            </div>
         </div>
-      `
-        <div id="footer">&nbsp;</div>
-      </div>
+        <!--a description of myself section
+        -->
+        <div class="template">
+            <div class="about">
+                <h2>About Myself</h2>
+                <ul class = "textUl">
+                    <li>My name is Jianglian Ni, I have more than 10 years work experience in china ( 9 years software testing and 3 years salesforce testing)</li>
+                    <li>As an experienced software tester, I know what the function should be for the program, I could like to continually devote myself to be a software developer to get to know how to coding.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- A description of Algonquin section
+        -->
+        <div class="footerTemplate">
+            <div class="about">
+                <h2><a href="https://www.algonquincollege.com/">Algonquin College</a></h2>
+                <ul class = "textUl">
+                    <li>Algonquin college was established during the formation of Ontario's college system in 1967.</li>
+                    <li>Has three campuses, all in Ontario: a primary campus located in Ottawa, and secondary campuses located in Perth and Pembroke.</li>
+                    <li> Offers bachelor's degrees, diplomas, and certificates in a range of disciplines and specialties. </li>
+                    <li>There are over 19,000 full-time students in more than 180 programs.</li>
+                    <li>There are 155 Ontario college programs, 18 apprenticeship programs, 40 co-op programs, 6 collaborative degree programs and 6 bachelor's degree programs.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="template">
+            <div class="footer">
+            </div>
+        </div>
     </body>
- </html>
+
+</html>
